@@ -25,7 +25,7 @@ header ul{
     display:flex;
     flex-wrap: wrap;
 }
-header a{
+header .ancho{
     color:var(--highlight2);
     font-weight: bold;
     padding:1rem .14rem;
@@ -34,7 +34,9 @@ header a{
     font-family: karla;
     font-size: 1.1rem;
 }
-
+header .ancho:hover{
+    color: var(--primary2);
+}
 .buttoncomp{
     font-family: karla;
     color:#333333;
@@ -45,6 +47,10 @@ header a{
     border-radius: 1rem;
     font-weight: bold;
     text-align: center;
+}
+.buttoncomp:hover{
+    box-shadow: 3px 3px 2px black;
+
 }
 .section1{
     background-color: var(--primary);
@@ -75,12 +81,6 @@ header a{
 .sec2grid2{
     grid-area: right;
     padding-top: 1rem;
-}
-@media(min-width:440px){
-    .sec2grid2{
-        grid-area: right;
-        padding-right: 1rem;
-    }  
 }
 
 .sec2grid2 img{
@@ -119,15 +119,7 @@ header a{
     grid-template-areas: "left" "right";
     padding-bottom: 3rem;
 }
-@media(min-width:440px){
-    .special1{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "left right";
-        padding-bottom: 3rem;
-    } 
-}
+
 .special1 h1{
     grid-area: left;
     color:var(--highlight2);
@@ -168,15 +160,7 @@ header a{
         grid-template-areas: "card1 card2" "card3";
     }
 }
-@media(min-width:450px){
-    .cardcontainer{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 1.5rem;
-        grid-template-areas: "card1 card2 card3";
-    }
-}
+
 .cardcontainer article{
     border:1px solid grey;
     border-radius: 1rem;
@@ -218,25 +202,7 @@ header a{
     gap: 1.5rem;
     grid-template-areas: "review1 review2" "review3 review4";
 }
-@media(min-width:400){
-    .reviewcontainer{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: 1fr 1fr;
-        gap: 1.5rem;
-        grid-template-areas: "review1 review2 review3" "review4";
-    }
-}
 
-@media(min-width:440px){
-    .reviewcontainer{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 1fr;
-        gap: 1.5rem;
-        grid-template-areas: "review1 review2 review3 review4";
-    }
-}
 
 .reviewbox{
     margin-top:3rem;
@@ -327,12 +293,22 @@ footer h5{
     color:#edefee;
     padding: 1rem 0 ;
 }
-footer a{
+footer .ancho{
     color:#edefee;
-    padding: 1rem 0 ;
     font-size: 0.9rem;
     font-family: Karla;
 
+}
+footer a{
+    color:#edefee;
+    font-size: 0.9rem;
+    font-family: Karla;
+}
+footer li{
+    padding-bottom:0.5rem
+}
+footer .ancho:hover{
+    color:var(--primary2)
 }
 .bookcontainer{
     background-color: var(--primary);
@@ -371,4 +347,32 @@ footer a{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+}
+
+@media(min-width:440px){
+    .special1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "left right";
+        padding-bottom: 3rem;
+    } 
+    .sec2grid2{
+        grid-area: right;
+        padding-right: 1rem;
+    } 
+    .cardcontainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "card1 card2 card3";
+    }
+    .reviewcontainer{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "review1 review2 review3 review4";
+    }
 }

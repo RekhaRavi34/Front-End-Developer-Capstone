@@ -8,9 +8,10 @@ import image2 from '../assets/prod2.jpg'
 import image3 from '../assets/prod3.jpg'
 import image4 from '../assets/mario.jpg'
 import image5 from '../assets/adrian.jpg'
-
+import { useNavigate } from 'react-router-dom';
 
 function Homepage() {
+  const navigate = useNavigate();
   return (
     <>
     <main>
@@ -20,7 +21,7 @@ function Homepage() {
               <h1>Little Lemon</h1>
               <h4>Chicago</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <Button>Reserve a table</Button>
+              <Button onclick={()=>navigate('/reserve')}>Reserve a table</Button>
             </div>
             <div className='sec2grid2'>
               <img src={littlelemon} />
@@ -31,7 +32,7 @@ function Homepage() {
       <div className='special1'>
         <h1>Specials</h1>
         <div className='specialbutton'>
-        <Button>Order  Online</Button>
+        <Button onclick={()=>navigate('/orderonline')}>Order  Online</Button>
         </div>
       </div>
       <div className='cardcontainer'>

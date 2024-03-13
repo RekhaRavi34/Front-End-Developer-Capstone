@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/boxyellow.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -11,11 +12,12 @@ function Footer() {
       <div class="doormatbox">
       <h5>Doormat Navigation</h5>
        <ul class="linkcontainer">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Reservation</a></li>
-            <li><a href="#">Order Online</a></li>
+       <li><Link className="ancho" to='/'>Home</Link></li>
+            <li ><Link className="ancho" to='/about'>About</Link></li>
+            <li><Link className="ancho" to='/menu'>Menu</Link></li>
+            <li><Link className="ancho" to='/reserve'>Reservations</Link></li>
+            <li><Link className="ancho" to='/orderonline'>Order Online</Link></li>
+            <li><Link className="ancho" to='/login'>Login</Link></li>
         </ul>
       </div>
        <div class="contactbox">
