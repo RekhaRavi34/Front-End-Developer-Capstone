@@ -30,7 +30,7 @@ function Homepage() {
         <section className='specials'>
       <div className='special1'>
         <h1>Specials</h1>
-        <div style={{display:'inline-flex',justifyContent:"flex-end", paddingRight:"1.2rem"}}>
+        <div className='specialbutton'>
         <Button>Order  Online</Button>
         </div>
       </div>
@@ -46,10 +46,10 @@ function Homepage() {
         <p style={{textAlign:"center", fontFamily:"Karla", fontWeight:"bold", fontSize:"1.5rem",}}>Testimonials</p>
       </div>
       <div className='reviewcontainer'>
-      <Review feedback="The food was superb" star="⭐⭐⭐⭐⭐⭐" name="Patrick"/>
-      <Review feedback="I really enjoyed the ambience" star="⭐⭐⭐⭐" name="William"/>
-      <Review feedback="The dishes I ordered were excellant" star="⭐⭐⭐⭐" name="Kate"/>
-      <Review feedback="The dishes I ordered were amazing" star="⭐⭐⭐⭐" name="Harry"/>
+      <Review className="review1" feedback="The food was superb" star="⭐⭐⭐⭐⭐⭐" name="Kate"/>
+      <Review className="review2" feedback="I really enjoyed the ambience" star="⭐⭐⭐⭐" name="Kate"/>
+      <Review className="review3" feedback="The dishes I ordered were excellant" star="⭐⭐⭐⭐" name="Kate"/>
+      <Review className="review4" feedback="The dishes I ordered were amazing" star="⭐⭐⭐⭐" name="Kate"/>
       </div>
      </div>
     </section>

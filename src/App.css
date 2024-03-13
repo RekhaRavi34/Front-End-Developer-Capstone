@@ -109,19 +109,37 @@ header a{
     font-family: Karla;
 }
 .specials{
-    margin: 2% 20%;
-    padding:1%;
+    margin: 2% 0;
+    padding:1% 20%;
 }
 .special1{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "left" "right";
     padding-bottom: 3rem;
 }
+@media(min-width:440px){
+    .special1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "left right";
+        padding-bottom: 3rem;
+    } 
+}
 .special1 h1{
+    grid-area: left;
     color:var(--highlight2);
     font-size: 25px;
     font-weight: bold;
     font-family: Markazi+Text;
+}
+.specialbutton{
+    grid-area: right;
+    display:inline-flex;
+    justify-content:flex-end;
+   
 }
 
 .card1{
@@ -133,6 +151,7 @@ header a{
 .card3{
     grid-area: card3;
 }
+
 .cardcontainer{
     display: grid;
     grid-template-columns: 100%;
@@ -145,11 +164,11 @@ header a{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: 1fr 1fr;
-        gap: 1.5rem;
+        gap: auto;
         grid-template-areas: "card1 card2" "card3";
     }
 }
-@media(min-width:440px){
+@media(min-width:450px){
     .cardcontainer{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -180,13 +199,45 @@ header a{
     margin: auto 20%;
     padding:6% 1%;
 }
+.review1{
+    grid-area: review1;
+}
+.review2{
+    grid-area: review2;
+}
+.review3{
+    grid-area: review3;
+}
+.review4{
+    grid-area: review4;
+}
 .reviewcontainer{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
-    grid-template-areas: "card1 card2 card3";
+    grid-template-areas: "review1 review2" "review3 review4";
 }
+@media(min-width:400){
+    .reviewcontainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "review1 review2 review3" "review4";
+    }
+}
+
+@media(min-width:440px){
+    .reviewcontainer{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "review1 review2 review3 review4";
+    }
+}
+
 .reviewbox{
     margin-top:3rem;
     border:1px solid grey;
@@ -195,13 +246,15 @@ header a{
     padding:0.5rem;
 }
 .reviewrate{
+    width:100%;
     padding-bottom: 0.7rem;
 }
 .profile{
-    width:30%;
-    height:30%;
+    width:100%;
+    height:100%;
     border-radius: 50%;
     padding: .5rem;
+    object-fit:cover
 }
 
 .lastsectionbox{

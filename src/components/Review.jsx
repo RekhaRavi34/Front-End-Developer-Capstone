@@ -5,9 +5,9 @@ function Review({name,feedback,star}) {
   return (
     <article className='reviewbox'>
       <div className='reviewrate'>
-        <p  style={{fontSize:"1rem"}}>{star}</p>
+        <p  style={{fontSize:"0.6rem"}}>{star}</p>
       </div>
-      <div style={{display:"inline-flex", justifyContent:"flex-start", alignItems:"center"}}>
+      <div style={{display:"flex",justifyContent:"flex-start", alignItems:"center", width:"50%", height:"5rem"}}>
         <img src={profile} className='profile'/>
         <p style={{fontWeight:"bold"}}>{name}</p>
       </div>
