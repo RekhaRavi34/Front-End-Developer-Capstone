@@ -2,9 +2,9 @@ import React from 'react'
 
 function Button({children,onclick}) {
   return (
-    <div className='buttoncomp' onClick={onclick}>
+    <main className='buttoncomp' aria-label='on click' onClick={onclick}>
       {children}
-    </div>
+    </main>
   )
 }
 

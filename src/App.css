@@ -57,23 +57,15 @@ header .ancho:hover{
     padding: 2% ;
 }
 .grid1{
-    margin: 0 20%;
+    width:calc(100% - 20%);
+    margin: 2% auto;
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-items: center;
     grid-template-areas: "left" "right";
 }
-@media(min-width:440px){
-    .grid1{
-        margin: 0 20%;
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-items: center;
-        grid-template-areas: "left right";
-    }
-}
+
 .sec1grid1{
     padding-right: 2rem;
     grid-area: left;
@@ -81,11 +73,15 @@ header .ancho:hover{
 .sec2grid2{
     grid-area: right;
     padding-top: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
 }
 
 .sec2grid2 img{
     width:100%;
     height:100%; 
+    object-fit: cover;
 }
 .grid1 h1{
     color:var(--primary2);
@@ -108,10 +104,7 @@ header .ancho:hover{
     padding-bottom: 3rem;
     font-family: Karla;
 }
-.specials{
-    margin: 2% 0;
-    padding:1% 20%;
-}
+
 .special1{
     display:grid;
     grid-template-columns: 100%;
@@ -143,7 +136,10 @@ header .ancho:hover{
 .card3{
     grid-area: card3;
 }
-
+.specials{
+width:calc(100% - 40%);
+margin:5% auto;
+}
 .cardcontainer{
     display: grid;
     grid-template-columns: 100%;
@@ -151,15 +147,9 @@ header .ancho:hover{
     gap: 1.5rem;
     grid-template-areas: "card1" "card2" "card3";
 }
-@media(min-width:340px){
-    .cardcontainer{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 1fr 1fr;
-        gap: auto;
-        grid-template-areas: "card1 card2" "card3";
-    }
-}
+
+
+
 
 .cardcontainer article{
     border:1px solid grey;
@@ -198,10 +188,15 @@ header .ancho:hover{
 .reviewcontainer{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1.5rem;
-    grid-template-areas: "review1 review2" "review3 review4";
+    grid-template-areas: "review1" "review2" "review3" "review4";
 }
+
+
+
+
+
 
 
 .reviewbox{
@@ -224,18 +219,25 @@ header .ancho:hover{
 }
 
 .lastsectionbox{
-    margin: auto 20%;
-    padding:4% 1%;
+    width:calc(100% - 20%);
+    margin:5% auto;
     display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "last1" "last2";
+}
+.lastsecpara{
+    padding-right:1rem;
+    grid-area: last1;
 }
 .lastsectionbox p:nth-of-type(1){
     font-size: 3rem;
     font-family: Karla;
     font-weight: bold;
     color:#495e57;
-    padding-bottom:1rem;
+ padding-bottom:1rem;
+
+
 }
 .lastsectionbox p:nth-of-type(2){
     font-size: 1rem;
@@ -245,12 +247,13 @@ header .ancho:hover{
     font-size: 1.5rem;
     font-family: Karla;
     padding-bottom:1rem;
-    color:var(--primary2)
+    color:var(--primary2);
 }
 .imagecontainer{
     width:100%;
     display:flex;
     flex-wrap: wrap;
+    grid-area: last2;
 }
 .overlapimage1{
     height:50%;
@@ -261,18 +264,23 @@ header .ancho:hover{
 .overlapimage2{
     height:50%;
     width:50%;
-    translate: -1rem 2rem;
+    translate: -2rem 2rem;
 }
 .footercontainer{
-    margin: auto 20%;
+    width: calc(100% - 20%);
+    margin: 0 auto;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: "logobox doormatbox" "contactbox socialbox";
     padding: 5rem 0; 
 }
+
 .footerlogobox{
     width:100%;
+    grid-area: logobox;
+    background-color: #F4CE14;
 }
 .footerimage{
     height:100%;
@@ -280,12 +288,18 @@ header .ancho:hover{
 }
 .doormatbox{
     padding: 0 0.5rem;
+    grid-area: doormatbox;
+    background-color: #F4CE14;
 }
 .contactbox{
     padding: 0 0.5rem;
+    grid-area: contactbox;
+    background-color: #F4CE14;
 }
 .socialbox{
     padding: 0 0.5rem;
+    grid-area: socialbox;
+    background-color: #F4CE14;
 }
 footer h5{
     font-size: 1.2rem;
@@ -326,13 +340,19 @@ footer .ancho:hover{
     height:2rem;
     background-color: #edefee;
     border-radius: 1rem;
+    padding:5px;
+    border: 0;
 }
+input[type="date"]:focus, input[type="number"]:focus {
+    outline: none;
+}
+
 .formcontainer{
     padding: 2rem 4rem;
     display:flex; justify-content:center;
 }
 ::placeholder{
-    margin: 5rem;
+    padding:5px
 }
 .labelclass{
     color:var(--primary2);
@@ -348,8 +368,112 @@ footer .ancho:hover{
     justify-content: center;
     margin-top: 2rem;
 }
+.confirmed-title {
 
-@media(min-width:440px){
+	text-align: center;
+    color:#000000
+}
+
+.confirmed-subtitle {
+	color: #000000;
+	text-align: center;
+	max-width: 600px;
+	width: 50%;
+}
+.title {
+	font-family: 'Markazi Text', serif;
+	font-size: 64px;
+	font-weight: 500;
+	line-height: 77px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #F4CE14;
+	margin: 0;
+}
+
+.subtitle {
+	font-family: 'Markazi Text', serif;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 48.01px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #FFFFFF;
+
+}
+.confirmed-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	padding-block: 2em;
+
+}
+
+@media(min-width:371px){
+    .cardcontainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: auto;
+        grid-template-areas: "card1 card2" "card3";
+    }
+    .specials{
+        width:calc(100% - 20%);
+        margin:5% auto;
+        }
+}
+@media(min-width:687px){
+    .lastsectionbox{
+        width:calc(100% - 40%);
+        margin:5% auto;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr ;
+        grid-template-areas: "last1 last2";
+    }
+    .grid1{
+        width: calc(100% - 40%);
+        margin: 5% auto;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        grid-template-areas: "left right";
+    }
+}
+@media(min-width:447px){
+    .reviewcontainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "review1 review2" "review3 review4";
+    }
+}
+@media(min-width:665px){
+    .reviewcontainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+        grid-template-areas: "review1 review2 review3" "review4";
+    }
+}
+@media(min-width:677px){
+    .footercontainer{
+        width: calc(100% - 40%);
+        margin: 0 auto;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "logobox doormatbox contactbox socialbox";
+        padding: 5rem 0; 
+    }
+}
+@media(min-width:769px){
     .special1{
         display:grid;
         grid-template-columns: 1fr 1fr;
@@ -366,13 +490,39 @@ footer .ancho:hover{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 1.5rem;
-        grid-template-areas: "card1 card2 card3";
     }
+    .specials{
+        width:calc(100% - 40%);
+        margin:5% auto;
+        }
+ 
+}
+@media(min-width:879px){
     .reviewcontainer{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr ;
         gap: 1.5rem;
-        grid-template-areas: "review1 review2 review3 review4";
+        grid-template-areas: "review1" "review2" "review3" "review4";
     }
 }
+/* To know, On small resolutions it stacks the grid items in a column and on large resolutions it lines them up in a 
+single row.             */
+
+
+/* @media (max-width: 700px) {
+    .grid-adjustable-columns {
+      display: grid;
+      grid-auto-flow: row;
+    }
+  }
+  
+  @media (min-width: 701px) {
+    .grid-adjustable-columns {
+      width: min(1000px,75rem);
+      margin: 0 auto;
+      grid-auto-flow: column;
+      gap: 1em;
+    }
+  } */
+  

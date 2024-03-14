@@ -2,7 +2,7 @@ import React from 'react'
 
 function Orderonline() {
   return (
-    <div  style={{fontSize:"5rem", padding:"5rem", textAlign:"center"}}>Orderonline</div>
+    <main  style={{fontSize:"5rem", padding:"5rem", textAlign:"center"}}>Orderonline</main>
   )
 }
 

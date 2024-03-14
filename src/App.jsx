@@ -7,6 +7,7 @@ import About from './pages/About'
 import Menu from './pages/Menu'
 import Orderonline from './pages/Orderonline'
 import Login from './pages/Login'
+import Bookingconfirmed from './pages/Bookingconfirmed'
 import { Route,Routes } from 'react-router-dom'
 
 
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <>
-    <div style={styles.container}>
+    <main style={styles.container}>
       <Header />
       <Routes>
         <Route path='/' element={<Homepage/>}/>
@@ -23,9 +24,10 @@ function App() {
         <Route path='/reserve' element={<Bookingpage/>}/>
         <Route path='/orderonline' element={<Orderonline/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/confirmed' element={<Bookingconfirmed/>}/>
       </Routes>
       <Footer/>
-    </div>
+    </main>
     </>
   )
 }

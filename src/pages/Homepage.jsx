@@ -29,7 +29,7 @@ function Homepage() {
           </div>
         </section>
         <section className='specials'>
-      <div className='special1'>
+        <div className='special1'>
         <h1>Specials</h1>
         <div className='specialbutton'>
         <Button onclick={()=>navigate('/orderonline')}>Order  Online</Button>
@@ -54,9 +54,9 @@ function Homepage() {
       </div>
      </div>
     </section>
-    <section className='lastsection'>
-      <div className='lastsectionbox'>
-        <div style={{paddingRight:"6rem"}}>
+    <section >
+    <div className='lastsectionbox'>
+        <div  className='lastsecpara'>
           <p>Little Lemon</p>
           <h4>Chicago</h4>
           <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. <br/>Exercitation veniam consequat sunt nostrud amet.
