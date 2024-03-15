@@ -267,20 +267,18 @@ margin:5% auto;
     translate: -2rem 2rem;
 }
 .footercontainer{
-    width: calc(100% - 20%);
+    width: calc(100% - 10%);
     margin: 0 auto;
     display: grid;
-    gap: 1.5rem;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows:1fr 1fr;
-    grid-template-areas: "logobox doormatbox" "contactbox socialbox";
+    grid-template-rows:auto;
+    grid-template-areas:"logobox doormatbox" "contactbox socialbox";
     padding: 5rem 0; 
 }
 
 .footerlogobox{
     width:100%;
     grid-area: logobox;
-    background-color: #F4CE14;
 }
 .footerimage{
     height:100%;
@@ -289,17 +287,15 @@ margin:5% auto;
 .doormatbox{
     padding: 0 0.5rem;
     grid-area: doormatbox;
-    background-color: #F4CE14;
 }
 .contactbox{
     padding: 0 0.5rem;
     grid-area: contactbox;
-    background-color: #F4CE14;
+
 }
 .socialbox{
     padding: 0 0.5rem;
     grid-area: socialbox;
-    background-color: #F4CE14;
 }
 footer h5{
     font-size: 1.2rem;
@@ -482,6 +478,10 @@ input[type="date"]:focus, input[type="number"]:focus {
         grid-template-rows: auto;
         grid-template-areas: "logobox doormatbox contactbox socialbox";
         padding: 5rem 0; 
+    }
+    .footerlogobox{
+        width:100%;
+        grid-area: logobox;
     }
 }
 @media(min-width:769px){
