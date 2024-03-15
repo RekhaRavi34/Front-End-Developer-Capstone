@@ -42,7 +42,8 @@ const handleUserInput = (e) =>{
       navigate("/confirmed");
     }
   }
-  const handleSubmit = () => {// Prevent the default form submission behavior
+  const handleSubmit = (e) => {
+    // Prevent the default form submission behavior
     submitForm(formData);
 }
   

@@ -410,6 +410,17 @@ input[type="date"]:focus, input[type="number"]:focus {
 	padding-block: 2em;
 
 }
+.errorgeneral{
+    color:red;
+    text-align: center;
+    font-size: medium;
+    font-family: Karla;
+}
+.error{
+    color:red;
+    font-size: small;
+    font-family: Karla;
+}
 
 @media(min-width:371px){
     .cardcontainer{
